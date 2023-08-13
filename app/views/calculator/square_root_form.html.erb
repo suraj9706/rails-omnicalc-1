@@ -1,0 +1,14 @@
+<!-- app/views/calculator/square_root_form.html.erb -->
+<h1>Target: Omnicalc-1 - Square Root</h1>
+<%= form_tag('/square_root/results') do %>
+  <label for="user_number">Enter a number:</label>
+  <%= text_field_tag(:number) %>
+  <%= submit_tag('Calculate Square Root') %>
+<% end %>
+
+<% if @result %>
+  <p><%= @result %></p>
+<% end %>
+
+<!-- Link back to the homepage -->
+<p><%= link_to 'Back to Homepage', root_path %></p>

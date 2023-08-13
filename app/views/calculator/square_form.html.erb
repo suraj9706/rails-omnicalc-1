@@ -1,0 +1,10 @@
+<!-- app/views/calculator/square_new.html.erb -->
+<%= form_tag('/square/results') do %>
+  <div>
+    <label for="user_number">Enter a number</label>
+  </div>
+  <div>
+    <%= text_field_tag(:number, nil, placeholder: 'What number do you want to take the square of?') %>
+  </div>
+  <%= submit_tag('Calculate square') %>
+<% end %>

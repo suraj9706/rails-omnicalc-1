@@ -1,0 +1,32 @@
+<!-- app/views/calculator/calculate.html.erb -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Omnicalc-1</title>
+</head>
+<body>
+  <h1>Omnicalc-1</h1>
+  <form action="/" method="get">
+    <label for="num1">Enter Number 1:</label>
+    <input type="text" name="num1" id="num1" required>
+
+    <label for="num2">Enter Number 2:</label>
+    <input type="text" name="num2" id="num2" required>
+
+    <input type="submit" value="Calculate">
+  </form>
+
+  <!-- Display results for basic arithmetic operations here -->
+
+  <div>
+    <a href="/square">Square</a>
+    <a href="/square_root">Square Root</a>
+    <a href="/payment">Payment</a>
+    <a href="/random">Random</a>
+  </div>
+
+  <% if @error_message %>
+    <p class="error"><%= @error_message %></p>
+  <% end %>
+</body>
+</html>

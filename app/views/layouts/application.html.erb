@@ -1,43 +1,34 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Rails Omnicalc-1</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-  </head>
+<head>
+  <title>Rails Omnicalc-1</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+</head>
+<body>
+  <table style="width: 100%" border="1">
+    <tr>
+      <td>
+        <strong>Calculators</strong>
+      </td>
 
-  <body>
-    <table style="width: 100%" border="1">
-      <tr>
-        <td>
-          <strong>Calculators</strong>
-        </td>
+      <td>
+        <%= link_to 'Square with Form', '/square/new' %>
+      </td>
 
-        <td>
-          <a href="/square/new">
-            Square with Form
-          </a>
-        </td>
+      <td>
+        <%= link_to 'Square Root with Form', '/square_root/new' %>
+      </td>
 
-        <td>
-          <a href="/square_root/new">
-            Square Root with Form
-          </a>
-        </td>
+      <td>
+        <%= link_to 'Payment with Form', '/payment/new' %>
+      </td>
 
-        <td>
-          <a href="/payment/new">
-            Payment with Form
-          </a>
-        </td>
-
-        <td>
-          <a href="/random/new">
-            Random with Form
-          </a>
-        </td>
-      </tr>
-    </table>
-    <%= yield %>
-  </body>
+      <td>
+        <%= link_to 'Random with Form', '/random/new' %>
+      </td>
+    </tr>
+  </table>
+  <%= yield %>
+</body>
 </html>

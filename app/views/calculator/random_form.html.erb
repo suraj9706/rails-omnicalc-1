@@ -1,0 +1,20 @@
+<!-- app/views/calculator/random_form.html.erb -->
+<h1>Omnicalc-1 - Random</h1>
+<%= form_tag('/random') do %>
+  <div>
+    <label for="min">Minimum:</label>
+    <%= text_field_tag(:min) %>
+  </div>
+  <div>
+    <label for="max">Maximum:</label>
+    <%= text_field_tag(:max) %>
+  </div>
+  <%= submit_tag('Pick random number') %>
+<% end %>
+
+<% if @result %>
+  <p><%= @result %></p>
+<% end %>
+
+<!-- Link back to the homepage -->
+<p><%= link_to 'Back to Homepage', root_path %></p>
