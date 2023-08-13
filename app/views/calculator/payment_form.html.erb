@@ -1,20 +1,24 @@
 <!-- app/views/calculator/payment_form.html.erb -->
-<h1>Omnicalc-1 - Payment</h1>
-<%= form_tag('/payment') do %>
-  <div>
-    <label for="apr">APR (annual percentage rate):</label>
-    <%= text_field_tag(:apr) %>
-  </div>
-  <div>
-    <label for="years">Number of years remaining:</label>
-    <%= text_field_tag(:years) %>
-  </div>
-  <div>
-    <label for="present_value">Present value:</label>
-    <%= text_field_tag(:present_value) %>
-  </div>
-  <%= submit_tag('Calculate Monthly Payment') %>
-<% end %>
+<%= form_tag('/payment/results') do %>
+    <div>
+      <label for="apr_input">APR</label>
+      <%= text_field_tag(:user_apr, nil, placeholder: 'E.g. 5.42', id: 'apr_input') %>
+    </div>
+
+    <div>
+      <label for="years_input">Number of years</label>
+      <%= text_field_tag(:user_years, nil, placeholder: 'How many years to repay?', id: 'years_input') %>
+    </div>
+
+    <div>
+      <label for="principal_input">Principal</label>
+      <%= text_field_tag(:user_pv, nil, placeholder: 'How much principal?', id: 'principal_input') %>
+    </div>
+
+    <%= submit_tag('Calculate monthly payment') %>
+  <% end %>
+</body>
+</html>
 
 <% if @result %>
   <p><%= @result %></p>

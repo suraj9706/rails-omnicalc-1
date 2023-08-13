@@ -11,5 +11,6 @@ Rails.application.routes.draw do
   post '/payment/results', to: 'calculator#payment'
 
   get '/random/new', to: 'calculator#random_form'
-  post '/random/results', to: 'calculator#random'
+  post '/random/results', to: 'calculator#random' 
+
 end

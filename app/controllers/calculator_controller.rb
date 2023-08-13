@@ -43,7 +43,7 @@ end
   def payment
     @apr = params[:apr].to_f
     @years = params[:years].to_i
-    @present_value = params[:present_value].to_f
+    @principal = params[:principal].to_f
 
     monthly_interest_rate = @apr / 12
     number_of_payments = @years * 12
@@ -63,6 +63,7 @@ end
     @min = params[:min].to_f
     @max = params[:max].to_f
     @random_number = rand(@min..@max).round(2)
-    render :random
+    render :random_form
   end
+  
 end
